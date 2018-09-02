@@ -4,6 +4,9 @@ switch:
     host: 192.168.0.42
 
 emulated_hue:
+  exposed_domains:
+    - switch
+    - script
   entities:
     switch.hdmisplitter:
       name: "HDMI Splitter"
