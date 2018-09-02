@@ -3,3 +3,7 @@ panel_iframe:
     title: 'Config Editor'
     icon: mdi:wrench
     url: http://hassio.local:3218
+  sshweb:
+    title: 'SSH to Pi'
+    icon: mdi:wrench
+    url: http://hassio.local:7681
