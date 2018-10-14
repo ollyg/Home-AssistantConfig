@@ -19,3 +19,28 @@ script:
         service: switch.toggle
         data:
           entity_id: switch.loungelamp
+
+automation:
+  - alias: Turn Lounge Lamp on at sunset
+    trigger:
+      - platform: sun
+        event: 'sunset'
+        offset: '-00:30:00'
+    condition:
+      - condition: state
+        entity_id: input_boolean.vacation_mode
+        state: 'on'
+    action:
+      - service: switch.turn_on
+        entity_id: switch.loungelamp
+  - alias: Turn Lounge Lamp off at bedtime
+    trigger:
+      - platform: time
+        at: '23:25'
+    condition:
+      - condition: state
+        entity_id: input_boolean.vacation_mode
+        state: 'on'
+    action:
+      - service: switch.turn_off
+        entity_id: switch.loungelamp
