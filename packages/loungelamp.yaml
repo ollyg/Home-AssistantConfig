@@ -1,0 +1,21 @@
+switch:
+    name: loungelamp
+    platform: tplink
+    host: 192.168.0.44
+
+emulated_hue:
+  exposed_domains:
+    - switch
+    - script
+  entities:
+    switch.loungelamp:
+      name: "Lounge Lamp"
+
+script:
+  loungelamp_toggle:
+    alias: 'Toggle Lounge Lamp'
+    sequence:
+      - alias: 'Lounge Lamp Toggle'
+        service: switch.toggle
+        data:
+          entity_id: switch.loungelamp
