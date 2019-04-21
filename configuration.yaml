@@ -18,6 +18,18 @@ homeassistant:
 # Show links to resources in log and frontend
 # introduction:
 
+recorder:
+  purge_keep_days: 1
+  exclude:
+    domains:
+      - automation
+      - weblink
+      - updater
+    entities:
+      - sun.sun # Don't record sun data
+      - sensor.last_boot # Comes from 'systemmonitor' sensor platform
+      - sensor.date
+
 # Enables the frontend
 frontend:
 
@@ -54,6 +66,12 @@ map:
 
 # Track the sun
 sun:
+
+tplink:
+  discovery: false
+  switch:
+    - host: 192.168.0.42
+    - host: 192.168.0.44
 
 # Weather prediction
 sensor:

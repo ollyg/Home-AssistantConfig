@@ -1,48 +1,11 @@
-switch:
-    name: spareroom
-    platform: tplink
-    host: 192.168.0.44
+#switch:
+#    name: fairy_lights
+#    platform: tplink
+#    host: 192.168.0.44
 
 emulated_hue:
   exposed_domains:
     - switch
-    - script
   entities:
-    switch.spareroom:
-      name: "Spare Room"
-
-script:
-  spareroom_toggle:
-    alias: 'Toggle Spare Room Lights'
-    sequence:
-      - alias: 'Spare Room Lights Toggle'
-        service: switch.toggle
-        data:
-          entity_id: switch.spareroom
-
-# automation:
-#   - alias: Turn Lounge Lamp on at sunset
-#     trigger:
-#       - platform: sun
-#         event: 'sunset'
-#         offset: '-00:30:00'
-#     condition:
-#       - condition: state
-#         entity_id: input_boolean.vacation_mode
-#         state: 'on'
-#     action:
-#       - service: switch.turn_on
-#         data:
-#           entity_id: switch.spareroom
-#   - alias: Turn Lounge Lamp off at bedtime
-#     trigger:
-#       - platform: time
-#         at: '00:00:22'
-#     condition:
-#       - condition: state
-#         entity_id: input_boolean.vacation_mode
-#         state: 'on'
-#     action:
-#       - service: switch.turn_off
-#         data:
-#           entity_id: switch.spareroom
+    switch.fairy_lights:
+      name: "Fairy Lights"

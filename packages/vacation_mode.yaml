@@ -1,4 +1,4 @@
-input_boolean:
-  vacation_mode:
-    name: Vacation Mode
-    icon: mdi:airplane
+#input_boolean:
+#  vacation_mode:
+#    name: Vacation Mode
+#    icon: mdi:airplane

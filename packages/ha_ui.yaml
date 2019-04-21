@@ -1,9 +1,19 @@
-panel_iframe:
-  configurator:
-    title: 'Config Editor'
-    icon: mdi:wrench
-    url: http://hassio.local:3218
-  sshweb:
-    title: 'SSH to Pi'
-    icon: mdi:wrench
-    url: http://hassio.local:7681
+panel_custom:
+  - name: hassio-main
+    sidebar_title: 'Config Editor'
+    sidebar_icon: mdi:wrench
+    js_url: /api/hassio/app/entrypoint.js
+    url_path: configurator
+    embed_iframe: true
+    require_admin: true
+    config:
+      ingress: "core_configurator"
+  - name: hassio-main
+    sidebar_title: 'SSH Console'
+    sidebar_icon: mdi:wrench
+    js_url: /api/hassio/app/entrypoint.js
+    url_path: sshconsole
+    embed_iframe: true
+    require_admin: true
+    config:
+      ingress: "a0d7b954_ssh"
