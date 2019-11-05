@@ -1,11 +1,11 @@
 #switch:
 #    name: fairy_lights
 #    platform: tplink
-#    host: 192.168.0.44
+#    host: 192.168.0.64
 
 emulated_hue:
   exposed_domains:
     - switch
   entities:
-    switch.back_bedroom_fairy_lights:
-      name: "Back Bedroom Fairy Lights"
+    switch.front_bedroom_fairy_lights:
+      name: "Front Bedroom Fairy Lights"

@@ -1,0 +1,30 @@
+- id: '1572984942909'
+  alias: Back Bedroom Fairy Lights Remote ON
+  description: ''
+  trigger:
+  - device_id: 8c4defbdcd3c4fb1a343cd12a27303af
+    domain: deconz
+    platform: device
+    subtype: turn_on
+    type: remote_button_short_press
+  condition: []
+  action:
+  - device_id: 0c053fd142194033bb7ec25cf88ec432
+    domain: switch
+    entity_id: switch.back_bedroom_fairy_lights
+    type: turn_on
+- id: '1572984942910'
+  alias: Back Bedroom Fairy Lights Remote OFF
+  description: ''
+  trigger:
+  - device_id: 8c4defbdcd3c4fb1a343cd12a27303af
+    domain: deconz
+    platform: device
+    subtype: turn_off
+    type: remote_button_short_press
+  condition: []
+  action:
+  - device_id: 0c053fd142194033bb7ec25cf88ec432
+    domain: switch
+    entity_id: switch.back_bedroom_fairy_lights
+    type: turn_off

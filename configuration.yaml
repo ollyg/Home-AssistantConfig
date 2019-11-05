@@ -36,6 +36,9 @@ frontend:
 # Enables configuration UI
 config:
 
+# enables automations
+automation: !include automations.yaml
+
 # Uncomment this if you are using SSL/TLS, running in Docker container, etc.
 # http:
 #   base_url: example.duckdns.org:8123
@@ -61,6 +64,19 @@ history:
 # View all events in a logbook
 logbook:
 
+#logger:
+#  default: warn
+#  logs:
+#   homeassistant.components.zha: debug
+#   bellows.ezsp: debug
+#   bellows.uart: debug
+#   zigpy.zdo: debug
+#   zigpy.application: debug
+
+#logger:
+#  logs:
+#    homeassistant.components.zha: debug
+
 # Enables a map showing the location of tracked devices
 map:
 
@@ -72,6 +88,7 @@ tplink:
   switch:
     - host: 192.168.0.42
     - host: 192.168.0.44
+    - host: 192.168.0.64
 
 # Weather prediction
 sensor:
